@@ -33,7 +33,7 @@ export default function Page2({csvDataa,total}) {
     top: '242.18px',
     left: '53px',
     zIndex: 56,       // Ensure it's above other elements
-    width: '78%',   // Adjust this depending on your container size
+    width: '77%',   // Adjust this depending on your container size
     color: '#000000', // Color for text (can be adjusted)
     fontFamily: 'Inter, var(--default-font-family)',
     fontSize: '10px',
