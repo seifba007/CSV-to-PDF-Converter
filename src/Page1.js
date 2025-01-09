@@ -18,7 +18,7 @@ const Page1 = ({csvDataa,total}) => {
       <div className="main-container" >
         <div className="frame-div" id="statement-container">
           <span className="your-statement-span">Your Statement</span>
-          <span className="span-29">29</span>
+          <span className="span-29"style={{fontWeight:'600'}}>29</span>
           <span className="page-span">(Page 1 of{total})</span>
           <span className="statement-span"style={{fontWeight:'600'}}>Statement</span>
           <div className="flex-row-ea-div">

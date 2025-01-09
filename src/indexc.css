@@ -43,10 +43,10 @@ button {
   position: relative;
   height: 27px;
   margin: 34.962px 0 0 361.92px;
-  color: #ffc13d;
+  color: #dea01c;
   font-family: Inter, var(--default-font-family);
   font-size: 25.20703125px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 27px;
   text-align: left;
   white-space: nowrap;
@@ -55,7 +55,7 @@ button {
 .span-29 {
   display: block;
   position: relative;
-  height: 10px;
+  height: 8px;
   margin: 2.678px 0 0 412.29px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
