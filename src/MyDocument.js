@@ -5,10 +5,13 @@ import Papa from "papaparse";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import Page3 from "./Page3";
+import Page4 from "./Page4";
+import Page5 from "./Page5";
 
 const MyDocument = () => {
   const [csvData, setCsvData] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // State to track loading
 
   // Function to handle CSV upload
   const handleCsvUpload = (event) => {
@@ -35,6 +38,7 @@ const MyDocument = () => {
   // Function to generate PDF with page numbers
   const generatePDF = async () => {
     try {
+      setIsLoading(true); // Set loading to true
       const container = document.getElementById("pdf-container");
 
       if (container) {
@@ -69,6 +73,8 @@ const MyDocument = () => {
       }
     } catch (error) {
       console.error("An error occurred while generating the PDF:", error);
+    } finally {
+      setIsLoading(false); // Reset loading after PDF generation
     }
   };
 
@@ -76,23 +82,23 @@ const MyDocument = () => {
   const getPageData = () => {
     const page1Data = csvData.slice(0, 10); // First 10 rows
     const page2Data = csvData.slice(10, 32); // Rows 11 to 32
-    const page3Data = csvData.slice(32); // Remaining rows starting from index 32
-
-    return { page1Data, page2Data, page3Data };
+    const page3Data = csvData.slice(32, csvData.length - 11); // Remaining rows except last 6
+    const page4Data = csvData.slice(csvData.length - 11); // Last 6 rows
+    return { page1Data, page2Data, page3Data, page4Data };
   };
 
-  const { page1Data, page2Data, page3Data } = getPageData();
+  const { page1Data, page2Data, page3Data, page4Data } = getPageData();
 
   // Calculate total number of pages based on rows per page (for Page 3)
   const rowsPerPage = 25;
-  const totalPagestot = Math.ceil(csvData.length / rowsPerPage);
+  const totalPages = Math.ceil(page3Data.length / rowsPerPage) + 3; // Adding 3 for Page1, Page2, and Page4
 
   // Split the page3Data into chunks of rowsPerPage size
   const page3Chunks = [];
   for (let i = 0; i < page3Data.length; i += rowsPerPage) {
     page3Chunks.push(page3Data.slice(i, i + rowsPerPage));
   }
-console.log(csvData)
+
   return (
     <div style={styles.container}>
       {/* Drag-and-Drop Zone */}
@@ -127,8 +133,15 @@ console.log(csvData)
       </div>
 
       {/* Download PDF Button */}
-      <button onClick={generatePDF} disabled={csvData.length==0}  style={styles.downloadButton}>
-        Download PDF
+      <button
+        onClick={generatePDF}
+        disabled={csvData.length === 0 || isLoading}
+        style={{
+          ...styles.downloadButton,
+          ...(isLoading ? styles.disabledButton : {}),
+        }}
+      >
+        {isLoading ? "Generating PDF..." : "Download PDF"}
       </button>
 
       {/* Container for PDF content */}
@@ -136,14 +149,10 @@ console.log(csvData)
         {csvData.length > 0 && (
           <>
             {/* Page 1 */}
-            {page1Data.length > 0 && (
-              <Page1 csvDataa={page1Data} total={totalPagestot} />
-            )}
+            {page1Data.length > 0 && <Page1 csvDataa={page1Data} total={totalPages} />}
 
             {/* Page 2 */}
-            {page2Data.length > 0 && (
-              <Page2 csvDataa={page2Data} total={totalPagestot} />
-            )}
+            {page2Data.length > 0 && <Page2 csvDataa={page2Data} total={totalPages} />}
 
             {/* Page 3 */}
             {page3Chunks.length > 0 &&
@@ -152,9 +161,13 @@ console.log(csvData)
                   key={`page3-${index}`}
                   csvDataa={chunk}
                   currentPage={index + 3}
-                  totalPages={totalPagestot}
+                  totalPages={totalPages}
                 />
               ))}
+
+            {/* Page 4 */}
+            {page4Data.length > 0 && <Page4 csvDataa={page4Data} total={totalPages} />}
+            {<Page5 csvDataa={page4Data} total={totalPages} />}
           </>
         )}
       </div>
@@ -207,6 +220,11 @@ const styles = {
     cursor: "pointer",
     fontSize: "16px",
     textAlign: "center",
+    transition: "all 0.3s",
+  },
+  disabledButton: {
+    backgroundColor: "#cccccc",
+    cursor: "not-allowed",
   },
   pdfContainer: {
     padding: "20px",

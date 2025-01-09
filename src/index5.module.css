@@ -1,0 +1,176 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.mainContainer {
+  overflow: hidden;
+}
+
+.mainContainer,
+.mainContainer * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.mainContainer {
+  position: relative;
+  width: 595.5px;
+  height: 842.25px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+.frame {
+  position: absolute;
+  width: 595.5px;
+  height: 842.25px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.clipPathGroup {
+  position: absolute;
+  width: 100%;
+  height: 99.99%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-mask-image: url(./assets/images/080cfdd8-e679-4d8a-9895-cbd3f3edc9b0.png);
+  -webkit-mask-size: cover;
+}
+.group {
+  position: absolute;
+  width: 100%;
+  height: 100.01%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.group1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.vector {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/f7948068-5b30-410d-ad6f-30b77cf4e109.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 4;
+}
+.clipPathGroup2 {
+  position: absolute;
+  width: 77.33%;
+  height: 71.32%;
+  top: 9.01%;
+  left: 10.45%;
+  z-index: 5;
+  -webkit-mask-image: url(./assets/images/3d5342ac-c6fc-4104-9f92-6060cc8c4a47.png);
+  -webkit-mask-size: cover;
+}
+.group3 {
+  position: relative;
+  width: 460.5px;
+  height: 600.75px;
+  margin: 0px 0 0 -0.04px;
+  z-index: 6;
+}
+.group4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/8a8c957d52d69f05ed40a408bf7b90b664eee73c.png)
+    no-repeat center;
+  background-size: contain;
+  z-index: 8;
+}
+.group5 {
+  position: absolute;
+  width: 91.96%;
+  height: 71.34%;
+  top: 9.05%;
+  left: -4.19%;
+  background: url(./assets/images/600ced45-f052-4c55-a4be-8fff877703b5.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 13;
+}
+.clipPathGroup6 {
+  position: absolute;
+  width: 12.31%;
+  height: 2.75%;
+  top: 31.12%;
+  left: 0;
+  z-index: 9;
+  -webkit-mask-image: url(./assets/images/e48d4fdf-2165-457f-aac3-84794a9e5f9d.png);
+  -webkit-mask-size: cover;
+}
+.group7 {
+  position: relative;
+  width: 98.25px;
+  height: 23.25px;
+  margin: -0.02px 0 0 -24.96px;
+  z-index: 10;
+  overflow: visible auto;
+}
+.group8 {
+  position: relative;
+  width: 98.25px;
+  height: 23.25px;
+  margin: 0px 0 0 0;
+  z-index: 11;
+}
+.rectangle9 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background-size: contain;
+  z-index: 12;
+}
+.zzrSlRS {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  width: 6.997px;
+  height: 200.08px;
+  top: 410.784px;
+  left: 14.671px;
+  color: #000000;
+  font-family: Montserrat, var(--default-font-family);
+  font-size: 6.900000095367432px;
+  font-weight: 400;
+  line-height: 8.411px;
+  text-align: left;
+  transform: rotate(-90deg);
+  z-index: 14;
+}

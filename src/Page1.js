@@ -109,7 +109,7 @@ const Page1 = ({csvDataa,total}) => {
     top: '448.18px',  // Position from the top
     left: '37.5px', // Position from the left
     zIndex: 56,       // Ensure it's above other elements
-    width: 'auto',    // Adjust this depending on your container size
+    width: '90%',    // Adjust this depending on your container size
     color: '#000000', // Color for text (can be adjusted)
     fontFamily: 'Inter, var(--default-font-family)',
     fontSize: '10px',
