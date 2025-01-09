@@ -92,7 +92,7 @@ const MyDocument = () => {
   for (let i = 0; i < page3Data.length; i += rowsPerPage) {
     page3Chunks.push(page3Data.slice(i, i + rowsPerPage));
   }
-
+console.log(csvData)
   return (
     <div style={styles.container}>
       {/* Drag-and-Drop Zone */}
@@ -127,7 +127,7 @@ const MyDocument = () => {
       </div>
 
       {/* Download PDF Button */}
-      <button onClick={generatePDF} style={styles.downloadButton}>
+      <button onClick={generatePDF} disabled={csvData.length==0}  style={styles.downloadButton}>
         Download PDF
       </button>
 
