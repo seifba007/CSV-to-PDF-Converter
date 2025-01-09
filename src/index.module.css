@@ -1,0 +1,302 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.mainContainer {
+  overflow: hidden;
+}
+
+.mainContainer,
+.mainContainer * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.mainContainer {
+  position: relative;
+  width: 595.2px;
+  height: 841.68px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+.frame {
+  position: absolute;
+  width: 595.2px;
+  height: 841.68px;
+  top: 0;
+  left: 0;
+  font-size: 0px;
+  overflow: hidden;
+}
+.pageNumber {
+  display: block;
+  position: relative;
+  height: 9px;
+  margin: 33px 0 0 471px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 8.859375px;
+  font-weight: 400;
+  line-height: 9px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 90;
+}
+.statement {
+  display: block;
+  position: relative;
+  height: 10px;
+  margin: -8px 0 0 344px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 99;
+}
+.flexRowAf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 195.79px;
+  height: 10px;
+  margin: -9.86px 0 0 342.72px;
+  z-index: 105;
+}
+.statement1 {
+  flex-shrink: 0;
+  position: relative;
+  height: 10px;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 105;
+}
+.group {
+  flex-shrink: 0;
+  position: relative;
+  height: 10px;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 104;
+}
+.accountNumber {
+  position: relative;
+  width: 196.08px;
+  margin: 3.86px 0 0 342.72px;
+  background: url(./assets/images/94fb5dc4-e03b-4633-b918-28049cf0fc68.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 3;
+  height: 1px;
+}
+.accountNumber2 {
+  display: block;
+  position: relative;
+  height: 10px;
+  margin: 6px 0 0 343px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 106;
+}
+.group3 {
+  display: block;
+  position: relative;
+  height: 10px;
+  margin: -9.94px 0 0 342.72px;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 103;
+}
+.group4 {
+  position: relative;
+  width: 196.08px;
+  margin: 3.14px 0 0 342.72px;
+  background: url(./assets/images/3cfdaeeb-2622-48ae-91ba-78ec1a167cab.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 4;
+  height: 1px;
+}
+.rectangle {
+  position: relative;
+  width: 296.88px;
+  height: 129.885px;
+  margin: 5.018px 0 0 241.44px;
+  z-index: 1;
+}
+.flexRowEd {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/8c1776733934f8fd7414dd28d7710318c4b5281c.png)
+    no-repeat center;
+  background-size: contain;
+  z-index: 2;
+}
+.group5 {
+  position: relative;
+  width: 526.577px;
+  height: 548.64px;
+  margin: 6.937px 0 0 15.402px;
+  z-index: 102;
+}
+.transaction {
+  position: absolute;
+  width: 91.52%;
+  height: 100%;
+  top: 0;
+  left: 8.47%;
+  background: url(./assets/images/1d322916-c770-4e83-ba57-d9e2ab4cb3ca.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 5;
+}
+.debit {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  height: 10px;
+  top: 6.54px;
+  left: 75.798px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 100;
+}
+.credit {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  height: 10px;
+  top: 6.54px;
+  left: 348.438px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 98;
+}
+.balance {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  height: 10px;
+  top: 6.54px;
+  left: 397.398px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 97;
+}
+.date {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  height: 10px;
+  top: 6.54px;
+  left: 485.718px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 96;
+}
+.transactionDetails {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  height: 10px;
+  top: 7.02px;
+  left: 44.598px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 101;
+}
+.transactionDetails6 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  height: 9px;
+  top: 23.574px;
+  left: 44.598px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 8.578125px;
+  font-weight: 400;
+  line-height: 9px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 95;
+}
+.cardDetails {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  height: 9px;
+  top: 33.654px;
+  left: 75.798px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 8.296875px;
+  font-weight: 400;
+  line-height: 9px;
+  text-align: left;
+  white-space: nowrap;}
